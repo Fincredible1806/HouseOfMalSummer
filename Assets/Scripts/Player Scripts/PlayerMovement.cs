@@ -12,7 +12,7 @@ public class PlayerMovement : MonoBehaviour
     public Transform groundCheck;
     public float groundDistance = 0.4f;
     public LayerMask groundMask;
-
+    [SerializeField] private GameObject torch;
     Vector3 velocity;
     bool isGrounded;
     // Update is called once per frame
@@ -27,6 +27,7 @@ public class PlayerMovement : MonoBehaviour
         }
 
         Movement();
+        LightToggle();
     }
 
     private void Movement()
@@ -52,4 +53,13 @@ public class PlayerMovement : MonoBehaviour
         velocity.y += gravity * Time.deltaTime;
         controller.Move(velocity * Time.deltaTime);
     }
+
+    private void LightToggle()
+    {
+        if (Input.GetKeyDown(KeyCode.Q))
+        {
+            Debug.Log("Torch key was pressed.");
+            torch.SetActive(!torch.active);
+        }
+    }    
 }
