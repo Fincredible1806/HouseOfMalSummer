@@ -10,6 +10,8 @@ public class PauseManager : MonoBehaviour
     public GameObject inGameUI;
     public GameObject noteButton;
     [SerializeField] PlayerInformation playerInformation;
+    public GameObject inMainStuff;
+    public GameObject noteUI;
 
 
     private void Awake()
@@ -41,6 +43,10 @@ public class PauseManager : MonoBehaviour
                 Pause();
             }
 
+        }
+        if (Input.GetKeyDown(KeyCode.LeftShift))
+        {
+            bringUpNotes();
         }    
     }
     public void Resume()
@@ -69,4 +75,28 @@ public class PauseManager : MonoBehaviour
         Application.Quit();
     }
 
-}
+    public void bringUpNotes()
+    {
+        if(playerInformation.noteInfos.Count > 0)
+            {
+                inMainStuff.active = !inMainStuff.active;
+                noteUI.active = !noteUI.active;
+                
+            }
+        if (!GameIsPaused)
+        {
+            Time.timeScale = 0f;
+            GameIsPaused = true;
+            return;
+        }
+        if (GameIsPaused)
+        {
+            Time.timeScale = 1f;
+            GameIsPaused = false;
+            return;
+        }
+    }
+    
+
+
+    }
