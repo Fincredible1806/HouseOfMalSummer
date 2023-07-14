@@ -6,4 +6,5 @@ public class PlayerInformation : MonoBehaviour
 {
     public Dictionary<string, AbstractInteractable> playerInventory = new Dictionary<string, AbstractInteractable>();
     public List<string> noteInfos = new List<string>();
+    public AudioClip startClip;
 }

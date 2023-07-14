@@ -15,6 +15,8 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private GameObject torch;
     Vector3 velocity;
     bool isGrounded;
+    [SerializeField] private AudioSource playerSource;
+    [SerializeField] private AudioClip torchClip;
     // Update is called once per frame
     void Update()
     {
@@ -60,6 +62,8 @@ public class PlayerMovement : MonoBehaviour
         {
             Debug.Log("Torch key was pressed.");
             torch.SetActive(!torch.active);
+            playerSource.clip = torchClip;
+            playerSource.Play();
         }
     }    
 }
