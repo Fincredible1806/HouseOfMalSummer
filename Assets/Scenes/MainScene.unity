@@ -85097,14 +85097,6 @@ PrefabInstance:
     serializedVersion: 2
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 542867826875944325, guid: 49f756f951e9f254792c3dd5fcfc5378, type: 3}
-      propertyPath: m_Volume
-      value: 0.25
-      objectReference: {fileID: 0}
-    - target: {fileID: 542867826875944346, guid: 49f756f951e9f254792c3dd5fcfc5378, type: 3}
-      propertyPath: moveStick
-      value: 
-      objectReference: {fileID: 0}
     - target: {fileID: 542867826875944347, guid: 49f756f951e9f254792c3dd5fcfc5378, type: 3}
       propertyPath: m_RootOrder
       value: 10
@@ -85152,10 +85144,6 @@ PrefabInstance:
     - target: {fileID: 542867826875944349, guid: 49f756f951e9f254792c3dd5fcfc5378, type: 3}
       propertyPath: m_Name
       value: FPSPlayer
-      objectReference: {fileID: 0}
-    - target: {fileID: 542867827247161513, guid: 49f756f951e9f254792c3dd5fcfc5378, type: 3}
-      propertyPath: moveStick
-      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 542867828006264920, guid: 49f756f951e9f254792c3dd5fcfc5378, type: 3}
       propertyPath: uiInfoText

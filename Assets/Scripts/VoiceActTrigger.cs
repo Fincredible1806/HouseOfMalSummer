@@ -6,15 +6,18 @@ public class VoiceActTrigger : MonoBehaviour
 {
     public PlayerInformation playerInfo;
     public AudioClip voiceClip;
+    public AudioSource voiceSource;
     void Start()
     {
         voiceClip = playerInfo.startClip;
-        AudioSource.PlayClipAtPoint(voiceClip, transform.position);
+        voiceSource.clip = voiceClip;
+        voiceSource.Play();
 
 
     }
     public void PlayNewClip()
     {
-        AudioSource.PlayClipAtPoint(voiceClip, transform.position);
+        voiceSource.clip = voiceClip;
+        voiceSource.Play();
     }
 }
