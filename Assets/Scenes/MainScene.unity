@@ -79685,6 +79685,18 @@ PrefabInstance:
       value: 001
       objectReference: {fileID: 0}
     - target: {fileID: 3535737639139139955, guid: 71dc954de73ec3643b5ca3bcd45c0a7b, type: 3}
+      propertyPath: isAVoiceTrigger
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3535737639139139955, guid: 71dc954de73ec3643b5ca3bcd45c0a7b, type: 3}
+      propertyPath: pickUpVoiceLine
+      value: 
+      objectReference: {fileID: 8300000, guid: c8a629add71dbce4ebb6492663e6ad11, type: 3}
+    - target: {fileID: 3535737639139139955, guid: 71dc954de73ec3643b5ca3bcd45c0a7b, type: 3}
+      propertyPath: voiceActTrigger
+      value: 
+      objectReference: {fileID: 1915375217}
+    - target: {fileID: 3535737639139139955, guid: 71dc954de73ec3643b5ca3bcd45c0a7b, type: 3}
       propertyPath: unityEvent.m_PersistentCalls.m_Calls.Array.size
       value: 0
       objectReference: {fileID: 0}
