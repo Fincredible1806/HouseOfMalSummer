@@ -93306,6 +93306,10 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1467303764, guid: 0dbbaee42e7219e49b0ba8fd9fab303e, type: 3}
+      propertyPath: pickUpVoiceLine
+      value: 
+      objectReference: {fileID: 8300000, guid: 03dbbec40f9af4541aef4dbf768d60f6, type: 3}
+    - target: {fileID: 1467303764, guid: 0dbbaee42e7219e49b0ba8fd9fab303e, type: 3}
       propertyPath: voiceActTrigger
       value: 
       objectReference: {fileID: 1915375217}
