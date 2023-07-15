@@ -37221,7 +37221,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh109748
+  m_Name: pb_Mesh73174
   serializedVersion: 11
   m_SubMeshes:
   - serializedVersion: 2
@@ -38490,6 +38490,9 @@ MonoBehaviour:
   interactableId: 676798
   source: {fileID: 0}
   interactSFX: {fileID: 8300000, guid: 9c1510bfb7f601242a221b4908ac88f4, type: 3}
+  pickUpVoiceLine: {fileID: 0}
+  isAVoiceTrigger: 0
+  voiceActTrigger: {fileID: 0}
 --- !u!64 &916984003
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -58995,6 +58998,9 @@ MonoBehaviour:
   interactableId: 124124124
   source: {fileID: 0}
   interactSFX: {fileID: 8300000, guid: 9c1510bfb7f601242a221b4908ac88f4, type: 3}
+  pickUpVoiceLine: {fileID: 0}
+  isAVoiceTrigger: 0
+  voiceActTrigger: {fileID: 0}
 --- !u!65 &1505514133
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -64055,6 +64061,9 @@ MonoBehaviour:
   interactableId: 676799
   source: {fileID: 0}
   interactSFX: {fileID: 8300000, guid: 2c2f49b62ac528443bc0f698f7f5967b, type: 3}
+  pickUpVoiceLine: {fileID: 0}
+  isAVoiceTrigger: 0
+  voiceActTrigger: {fileID: 0}
 --- !u!4 &1664373166 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4482812400831441169, guid: f32ee049bc4206f4ba051614271499be, type: 3}
@@ -66102,6 +66111,9 @@ MonoBehaviour:
   interactableId: 1010
   source: {fileID: 0}
   interactSFX: {fileID: 8300000, guid: 9c1510bfb7f601242a221b4908ac88f4, type: 3}
+  pickUpVoiceLine: {fileID: 0}
+  isAVoiceTrigger: 0
+  voiceActTrigger: {fileID: 0}
 --- !u!1001 &1721490586
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -76679,6 +76691,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 598c2d0889ffc6a4dad2970027fc5ef2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1915375217 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 542867826875944326, guid: 49f756f951e9f254792c3dd5fcfc5378, type: 3}
+  m_PrefabInstance: {fileID: 542867828786037751}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1915375210}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3e5a55bbb3b503b45bface2a3a7f2352, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1916324690
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -79188,6 +79211,9 @@ MonoBehaviour:
   interactableId: 1234
   source: {fileID: 1998095680}
   interactSFX: {fileID: 8300000, guid: 9e410c05e0110fa45ba9f4131a879442, type: 3}
+  pickUpVoiceLine: {fileID: 0}
+  isAVoiceTrigger: 0
+  voiceActTrigger: {fileID: 0}
 --- !u!23 &1998095676
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -90028,6 +90054,22 @@ PrefabInstance:
       value: 006
       objectReference: {fileID: 0}
     - target: {fileID: 3535737639139139955, guid: 71dc954de73ec3643b5ca3bcd45c0a7b, type: 3}
+      propertyPath: isAVoiceTrigger
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3535737639139139955, guid: 71dc954de73ec3643b5ca3bcd45c0a7b, type: 3}
+      propertyPath: pickUpVoiceLine
+      value: 
+      objectReference: {fileID: 8300000, guid: ce8817532cf00c74c8800a867d795f68, type: 3}
+    - target: {fileID: 3535737639139139955, guid: 71dc954de73ec3643b5ca3bcd45c0a7b, type: 3}
+      propertyPath: voiceActTrigger
+      value: 
+      objectReference: {fileID: 1915375217}
+    - target: {fileID: 3535737639139139955, guid: 71dc954de73ec3643b5ca3bcd45c0a7b, type: 3}
+      propertyPath: thePlayerInformation
+      value: 
+      objectReference: {fileID: 1915375215}
+    - target: {fileID: 3535737639139139955, guid: 71dc954de73ec3643b5ca3bcd45c0a7b, type: 3}
       propertyPath: unityEvent.m_PersistentCalls.m_Calls.Array.size
       value: 0
       objectReference: {fileID: 0}
@@ -93259,6 +93301,14 @@ PrefabInstance:
       propertyPath: interactableId
       value: 004
       objectReference: {fileID: 0}
+    - target: {fileID: 1467303764, guid: 0dbbaee42e7219e49b0ba8fd9fab303e, type: 3}
+      propertyPath: isAVoiceTrigger
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1467303764, guid: 0dbbaee42e7219e49b0ba8fd9fab303e, type: 3}
+      propertyPath: voiceActTrigger
+      value: 
+      objectReference: {fileID: 1915375217}
     - target: {fileID: 1467303764, guid: 0dbbaee42e7219e49b0ba8fd9fab303e, type: 3}
       propertyPath: unityEvent.m_PersistentCalls.m_Calls.Array.size
       value: 1
