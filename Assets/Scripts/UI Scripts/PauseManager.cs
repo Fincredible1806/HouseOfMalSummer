@@ -36,18 +36,23 @@ public class PauseManager : MonoBehaviour
         {
             if (GameIsPaused)
             {
+
                 Resume();
+                Cursor.lockState = CursorLockMode.Locked;
+                Cursor.visible = false;
             }
             else
             {
                 Pause();
+                Cursor.lockState = CursorLockMode.None;
+                Cursor.visible = true;
             }
 
         }
         if (Input.GetKeyDown(KeyCode.LeftShift))
         {
             bringUpNotes();
-        }    
+        }
     }
     public void Resume()
     {
@@ -77,23 +82,27 @@ public class PauseManager : MonoBehaviour
 
     public void bringUpNotes()
     {
-        if(playerInformation.noteInfos.Count > 0)
+        if (playerInformation.noteInfos.Count > 0)
+        {
+            inMainStuff.active = !inMainStuff.active;
+            noteUI.active = !noteUI.active;
+            if (!GameIsPaused)
             {
-                inMainStuff.active = !inMainStuff.active;
-                noteUI.active = !noteUI.active;
-                
+                Time.timeScale = 0f;
+                GameIsPaused = true;
+                Cursor.lockState = CursorLockMode.None;
+                Cursor.visible = true;
+                return;
             }
-        if (!GameIsPaused)
-        {
-            Time.timeScale = 0f;
-            GameIsPaused = true;
-            return;
-        }
-        if (GameIsPaused)
-        {
-            Time.timeScale = 1f;
-            GameIsPaused = false;
-            return;
+            if (GameIsPaused)
+            {
+                Time.timeScale = 1f;
+                GameIsPaused = false;
+                Cursor.lockState = CursorLockMode.Locked;
+                Cursor.visible = false;
+                return;
+            }
+
         }
     }
     

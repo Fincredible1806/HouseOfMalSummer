@@ -9,6 +9,7 @@ public class Dirt : AbstractInteractable
     [SerializeField] string diggableDirt;
     public bool locked { get; set; }
     [SerializeField] string shovelId;
+    public Animator animator;
 
     private void Awake()
     {
@@ -28,7 +29,7 @@ public class Dirt : AbstractInteractable
             textOpacity.fadeTime = 3f;
             uiInfoText.text = diggableDirt;
             unityEvent?.Invoke(playerInformation);
-            Destroy(gameObject);
+            Destroy(gameObject, 0.5f);
         }
         else
         {
