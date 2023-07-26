@@ -8212,6 +8212,11 @@ Transform:
   m_Father: {fileID: 1830809666}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1168593028 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5618078180554453780, guid: a9b1d2edfa48b814c814f3fd93a18958, type: 3}
+  m_PrefabInstance: {fileID: 1901423172}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1181760281
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9775,6 +9780,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 3455368285760427302, guid: 33280ced5102eb440aab60e005dcf1e2, type: 3}
   m_PrefabInstance: {fileID: 1364808226}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1377374125 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5618078180877460829, guid: a9b1d2edfa48b814c814f3fd93a18958, type: 3}
+  m_PrefabInstance: {fileID: 1901423172}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 27ac4281d825d9d4c9242178249dce83, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1379435939
 GameObject:
   m_ObjectHideFlags: 0
@@ -10046,6 +10062,33 @@ MonoBehaviour:
   goodEndSceneName: MainScene
   bestEndSceneName: MainScene
   badEndSceneName: MainScene
+  endCollideEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1377374125}
+        m_TargetAssemblyTypeName: AnimationHandler, Assembly-CSharp
+        m_MethodName: ToggleBool
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Start
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1168593028}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
 --- !u!65 &1445065385
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -12867,6 +12910,65 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1888619775}
   m_Mesh: {fileID: 10206, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1001 &1901423172
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 2
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 5618078180554460826, guid: a9b1d2edfa48b814c814f3fd93a18958, type: 3}
+      propertyPath: m_RootOrder
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 5618078180554460826, guid: a9b1d2edfa48b814c814f3fd93a18958, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 810.38184
+      objectReference: {fileID: 0}
+    - target: {fileID: 5618078180554460826, guid: a9b1d2edfa48b814c814f3fd93a18958, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 277.15094
+      objectReference: {fileID: 0}
+    - target: {fileID: 5618078180554460826, guid: a9b1d2edfa48b814c814f3fd93a18958, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -43.268486
+      objectReference: {fileID: 0}
+    - target: {fileID: 5618078180554460826, guid: a9b1d2edfa48b814c814f3fd93a18958, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5618078180554460826, guid: a9b1d2edfa48b814c814f3fd93a18958, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5618078180554460826, guid: a9b1d2edfa48b814c814f3fd93a18958, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5618078180554460826, guid: a9b1d2edfa48b814c814f3fd93a18958, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5618078180554460826, guid: a9b1d2edfa48b814c814f3fd93a18958, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5618078180554460826, guid: a9b1d2edfa48b814c814f3fd93a18958, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5618078180554460826, guid: a9b1d2edfa48b814c814f3fd93a18958, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5618078180554460827, guid: a9b1d2edfa48b814c814f3fd93a18958, type: 3}
+      propertyPath: m_Name
+      value: LevelLoader
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_AddedGameObjects: []
+  m_SourcePrefab: {fileID: 100100000, guid: a9b1d2edfa48b814c814f3fd93a18958, type: 3}
 --- !u!1001 &1902980418
 PrefabInstance:
   m_ObjectHideFlags: 0

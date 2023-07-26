@@ -861,6 +861,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   noteInfos: []
+  startClip: {fileID: 0}
 --- !u!4 &903168436
 Transform:
   m_ObjectHideFlags: 0
@@ -1284,8 +1285,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pauseMenuUI: {fileID: 1940227484}
   inGameUI: {fileID: 8178564}
-  noteButton: {fileID: 2066484854}
+  noteButton: {fileID: 903168434}
   playerInformation: {fileID: 903168435}
+  inMainStuff: {fileID: 0}
+  noteUI: {fileID: 0}
 --- !u!1 &2066484854
 GameObject:
   m_ObjectHideFlags: 0
