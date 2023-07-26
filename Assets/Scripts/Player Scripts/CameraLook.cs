@@ -8,14 +8,18 @@ public class CameraLook : MonoBehaviour
     public float sensetivity = 100f;
     public Transform playerBody;
     float xRotation = 0f;
-    public GameObject FlashLight;
+    public List<GameObject> heldItems = new List<GameObject>();
 
     // Update is called once per frame
     void LateUpdate()
     {
         //Updating camera location every frame based on player
         CameraMovement();
-        FlashLight.transform.localRotation = Quaternion.Euler(xRotation + 90f, 0f, 0f);
+        foreach (var currentItem in heldItems)
+        {
+            currentItem.transform.localRotation = Quaternion.Euler(xRotation + 90f, 0f, 0f);
+        }
+
     }
 
     private void CameraMovement()
@@ -24,10 +28,10 @@ public class CameraLook : MonoBehaviour
         float mouseY;
         mouseX = Input.GetAxis("Mouse X") * sensetivity * Time.deltaTime;
         mouseY = Input.GetAxis("Mouse Y") * sensetivity * Time.deltaTime;
-       // else
+        // else
         //{
         //   mouseX = moveStick.Horizontal * sensetivity * Time.deltaTime;
-         //   mouseY = moveStick.Vertical * sensetivity * Time.deltaTime;
+        //   mouseY = moveStick.Vertical * sensetivity * Time.deltaTime;
         //}
         xRotation -= mouseY;
         xRotation = Mathf.Clamp(xRotation, -90f, 90f);
