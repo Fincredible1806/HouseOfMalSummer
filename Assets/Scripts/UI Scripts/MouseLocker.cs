@@ -19,4 +19,14 @@ public class MouseLocker : MonoBehaviour
             Cursor.visible = true;
         }
     }
+
+    private void Update()
+    {
+
+        if (Input.GetKeyDown(KeyCode.M));
+        {
+            Cursor.lockState = CursorLockMode.None;
+            Cursor.visible = true;
+        }
+    }
 }

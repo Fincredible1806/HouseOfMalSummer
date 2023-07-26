@@ -4,11 +4,10 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
+    [Header("Basic Things")]
     public CharacterController controller;
-    [SerializeField] private FixedJoystick moveStick;
     public float speed = 12f;
     public float gravity = -9.81f;
-    [SerializeField] private bool onPC;
     public Transform groundCheck;
     public float groundDistance = 0.4f;
     public LayerMask groundMask;
@@ -17,6 +16,16 @@ public class PlayerMovement : MonoBehaviour
     bool isGrounded;
     [SerializeField] private AudioSource playerSource;
     [SerializeField] private AudioClip torchClip;
+    [SerializeField] private Camera playerCam;
+
+
+    private void Awake()
+    {
+        playerCam = GetComponentInChildren<Camera>();
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
+    }
+
     // Update is called once per frame
     void Update()
     {
@@ -36,18 +45,9 @@ public class PlayerMovement : MonoBehaviour
     {
         float x;
         float z;
-
-        if (onPC)
-        {
-            x = Input.GetAxis("Horizontal");
-            z = Input.GetAxis("Vertical");
-        }
-
-        else
-        {
-            x = moveStick.Horizontal;
-            z = moveStick.Vertical;
-        }
+        x = Input.GetAxis("Horizontal");
+        z = Input.GetAxis("Vertical");
+        
         Vector3 move = transform.right * x + transform.forward * z;
 
         controller.Move(speed * Time.deltaTime * move);
