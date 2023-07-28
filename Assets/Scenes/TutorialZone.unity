@@ -2465,6 +2465,11 @@ Light:
   m_UseViewFrustumForShadowCasterCull: 1
   m_ShadowRadius: 0
   m_ShadowAngle: 0
+--- !u!95 &385512864 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 5618078180877460825, guid: a9b1d2edfa48b814c814f3fd93a18958, type: 3}
+  m_PrefabInstance: {fileID: 1901423172}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &406780476
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8804,17 +8809,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 3455368285760427302, guid: 33280ced5102eb440aab60e005dcf1e2, type: 3}
   m_PrefabInstance: {fileID: 1364808226}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1377374125 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 5618078180877460829, guid: a9b1d2edfa48b814c814f3fd93a18958, type: 3}
-  m_PrefabInstance: {fileID: 1901423172}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 27ac4281d825d9d4c9242178249dce83, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1379435939
 GameObject:
   m_ObjectHideFlags: 0
@@ -9061,6 +9055,7 @@ GameObject:
   - component: {fileID: 1445065386}
   - component: {fileID: 1445065385}
   - component: {fileID: 1445065384}
+  - component: {fileID: 1445065387}
   m_Layer: 0
   m_Name: EndCollider
   m_TagString: Untagged
@@ -9089,22 +9084,22 @@ MonoBehaviour:
   endCollideEvent:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1377374125}
-        m_TargetAssemblyTypeName: AnimationHandler, Assembly-CSharp
-        m_MethodName: ToggleBool
-        m_Mode: 5
+      - m_Target: {fileID: 1168593028}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: Start
-          m_BoolArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
         m_CallState: 2
-      - m_Target: {fileID: 1168593028}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
+      - m_Target: {fileID: 1445065387}
+        m_TargetAssemblyTypeName: MenuFunctions, Assembly-CSharp
+        m_MethodName: LoadGame
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -9141,6 +9136,21 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: -90.006, z: 0}
+--- !u!114 &1445065387
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1445065383}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: abbab3f5daedd8249ae3b2452713dd0c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  transition: {fileID: 385512864}
+  transitionTime: 2
+  mainMenu: 0
 --- !u!1001 &1453613253
 PrefabInstance:
   m_ObjectHideFlags: 0

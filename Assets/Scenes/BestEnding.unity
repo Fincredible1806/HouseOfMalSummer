@@ -499,6 +499,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   noteInfos: []
+  startClip: {fileID: 0}
 --- !u!1 &833450812
 GameObject:
   m_ObjectHideFlags: 0
@@ -1280,6 +1281,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1939695480}
+  - component: {fileID: 1939695481}
   m_Layer: 0
   m_Name: DoNotDelet
   m_TagString: Untagged
@@ -1302,6 +1304,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1939695481
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1939695479}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 40fd58ea03cb68b4b90fef16992f8dd1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  notAmenu: 0
 --- !u!1 &1940227484
 GameObject:
   m_ObjectHideFlags: 0
@@ -1425,3 +1440,5 @@ MonoBehaviour:
   inGameUI: {fileID: 1476649044}
   noteButton: {fileID: 1939695479}
   playerInformation: {fileID: 644046513}
+  inMainStuff: {fileID: 0}
+  noteUI: {fileID: 0}
