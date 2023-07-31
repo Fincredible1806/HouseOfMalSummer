@@ -62,7 +62,7 @@ public class TheBreakingWall : AbstractInteractable
                     rb.isKinematic = false;
                     rb.useGravity = true; 
                     rb.AddForce(forceAttack, ForceMode.VelocityChange);
-                    Destroy(gameObject, 5f);
+                    Destroy(child, 5f);
                 }
                 uiInfoText.text = smashDownText;
             }
