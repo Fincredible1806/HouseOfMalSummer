@@ -12,18 +12,10 @@ public class MusicChanger : MonoBehaviour
     {
         musicChanger = GetComponent<Collider>();
     }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
     private void OnTriggerEnter(Collider other)
     {
-        if(other.tag == playerTag)
+        if (other.CompareTag(playerTag) && musicSource.clip != newMusicClip)
         {
-            if(musicSource.clip != newMusicClip)
             musicSource.clip = newMusicClip;
             musicSource.Play();
         }
