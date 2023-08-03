@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class SoundTrigger : MonoBehaviour
 {
+    [SerializeField] AudioClip[] soundClips;
     [Range(0.1f, 1)]
     [SerializeField] float triggerChance;
     [SerializeField] float minValue;
@@ -18,8 +19,15 @@ public class SoundTrigger : MonoBehaviour
                 triggerSet = Random.Range(minValue, maxValue);
                 if (triggerChance <= triggerSet)
                 {
-                    AS.Play();
+                SoundPicker();
                 }
             }
         }
+
+    void SoundPicker()
+    {
+        AudioClip clip = soundClips[Random.Range(0, soundClips.Length)];
+        AS.clip = clip;
+        AS.Play();
+    }
 }
