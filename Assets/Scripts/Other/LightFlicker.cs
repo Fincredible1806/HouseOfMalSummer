@@ -6,12 +6,12 @@ public class LightFlicker : MonoBehaviour
 {
     public Light flickerLight;
 
-    public float MinTime;
-    public float MaxTime;
-    public float Timer;
+    [SerializeField] float MinTime;
+    [SerializeField] float MaxTime;
+    [SerializeField] float Timer;
 
-    public AudioSource AS;
-    public AudioClip LightAudio;
+    [SerializeField] AudioSource AS;
+    [SerializeField] AudioClip LightAudio;
     // Start is called before the first frame update
     void Start()
     {
