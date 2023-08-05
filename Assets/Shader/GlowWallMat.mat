@@ -52,12 +52,12 @@ Material:
     m_Floats:
     - _QueueControl: 0
     - _QueueOffset: 10
-    - _VoronoiAgitation: 1
-    - _VoronoiPower: 4.81
-    - _VoronoiScale: -0.4
+    - _VoronoiAgitation: 2.18
+    - _VoronoiPower: -2.54
+    - _VoronoiScale: -2.08
     m_Colors:
-    - _BaseColour: {r: 0, g: 0, b: 0, a: 1}
-    - _VoronoiColour: {r: 7.8705792, g: 46.82995, b: 0, a: 1}
-    - _VoronoiSpeed: {r: 1, g: -0.5, b: 0, a: 0}
+    - _BaseColour: {r: 0.13207549, g: 0, b: 0, a: 1}
+    - _VoronoiColour: {r: 0.0000804228, g: 0.0002489277, b: 0.000042126227, a: 1}
+    - _VoronoiSpeed: {r: 0.33, g: -0.5, b: 0, a: 0}
     - _VoronoiTiling: {r: 0.59, g: 0.6, b: 0, a: 0}
   m_BuildTextureStacks: []
