@@ -20,7 +20,6 @@ public class TheBreakingWall : AbstractInteractable
         locked = true;
     }
 
-
     public override bool Interaction(Interaction interaction, PlayerInformation playerInformation)
     {
         if(isBroken)
@@ -48,26 +47,24 @@ public class TheBreakingWall : AbstractInteractable
         {
             locked = false;
         }
-        if (!locked)
+        if (!locked && !isBroken)
         {
-
-            textOpacity.fadeTime = 3f;
-            if (!isBroken)
-            {
+                uiInfoText.text = smashDownText;
+                textOpacity.fadeTime = 3f;
                 AudioSource.PlayClipAtPoint(interactSFX, transform.position);
                 isBroken = true;
+
                 foreach (Transform child in transform)
                 {
                     Rigidbody rb = child.GetComponent<Rigidbody>();
                     rb.isKinematic = false;
                     rb.useGravity = true; 
                     rb.AddForce(forceAttack, ForceMode.VelocityChange);
-                    Destroy(child, 5f);
+                    Destroy(child.gameObject, 3.5f);
+    
                 }
-                uiInfoText.text = smashDownText;
-            }
-            Debug.Log("Smashed it");
-            unityEvent?.Invoke(playerInformation);
+                Debug.Log("Smashed it");
+                unityEvent?.Invoke(playerInformation);
         }
         return true;
     }
