@@ -15,6 +15,8 @@ public class Oven : AbstractStateObject
     bool sequenceHit = true;
     public GameObject oven;
     private MeshCollider ovenCollider;
+    [SerializeField] private string interactTag;
+    [SerializeField] private bool isPickup;
     private void Start()
     {
         EnvironmentInformation.instance.RegisterStateObject(this);
@@ -56,7 +58,10 @@ public class Oven : AbstractStateObject
             animationHandler.ToggleBool(doorBool);
             ovenCollider = oven.GetComponent<MeshCollider>();
             ovenCollider.enabled = false;
-            
+            if(isPickup)
+            {
+                oven.tag = interactTag;
+            }
             Invoke("HobOff", Time.deltaTime);
         }
     }
