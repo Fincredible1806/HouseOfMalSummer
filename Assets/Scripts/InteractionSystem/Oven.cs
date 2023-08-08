@@ -60,7 +60,7 @@ public class Oven : AbstractStateObject
             ovenCollider.enabled = false;
             if(isPickup)
             {
-                oven.layer = InteractLayer;
+                gameObject.layer = InteractLayer;
             }
             Invoke("HobOff", Time.deltaTime);
         }
