@@ -15,8 +15,8 @@ public class Oven : AbstractStateObject
     bool sequenceHit = true;
     public GameObject oven;
     private MeshCollider ovenCollider;
-    [SerializeField] private string interactTag;
     [SerializeField] private bool isPickup;
+    [SerializeField] int InteractLayer;
     private void Start()
     {
         EnvironmentInformation.instance.RegisterStateObject(this);
@@ -60,7 +60,7 @@ public class Oven : AbstractStateObject
             ovenCollider.enabled = false;
             if(isPickup)
             {
-                oven.tag = interactTag;
+                oven.layer = InteractLayer;
             }
             Invoke("HobOff", Time.deltaTime);
         }
