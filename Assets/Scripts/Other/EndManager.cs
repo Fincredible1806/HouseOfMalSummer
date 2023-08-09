@@ -14,7 +14,15 @@ public class EndManager : MonoBehaviour
     [SerializeField] string badEndSceneName;
     [SerializeField] UnityEvent endCollideEvent;
     [SerializeField] string memCardId;
+    [SerializeField] GameObject endCanvas;
+    [SerializeField] Vector3 resetLocation;
 
+    private void OnEnable()
+    {
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
+        Time.timeScale = 0;
+    }
     public void Ending()
     {
         endCollideEvent.Invoke();
@@ -34,4 +42,11 @@ public class EndManager : MonoBehaviour
             SceneManager.LoadScene(badEndSceneName);
         }
     }
+    public void Continue()
+    {
+        Time.timeScale = 1;
+        player.transform.position = new Vector3(resetLocation.x, resetLocation.y, resetLocation.z);
+        endCanvas.SetActive(false);
+    }
+
 }
