@@ -13,23 +13,25 @@ public class EndManager : MonoBehaviour
     [SerializeField] string bestEndSceneName;
     [SerializeField] string badEndSceneName;
     [SerializeField] UnityEvent endCollideEvent;
+    [SerializeField] string memCardId;
 
-    private void OnTriggerEnter(Collider other)
+    public void Ending()
     {
         endCollideEvent.Invoke();
-
         int playerNoteCount = playerInformation.noteInfos.Count;
-        if (playerNoteCount == worldNoteCount)
+        if (playerInformation.playerInventory.ContainsKey(memCardId) && playerNoteCount >= worldNoteCount/2)
         {
-            SceneManager.LoadSceneAsync(bestEndSceneName);
+            SceneManager.LoadScene(bestEndSceneName);
+            return;
         }
-        if (playerNoteCount >= worldNoteCount/2 && playerNoteCount < worldNoteCount)
+        if(playerNoteCount >= worldNoteCount/2)
         {
-            SceneManager.LoadSceneAsync(goodEndSceneName);
+            SceneManager.LoadScene(goodEndSceneName);
+            return;
         }
         else
         {
-            SceneManager.LoadSceneAsync(badEndSceneName);
+            SceneManager.LoadScene(badEndSceneName);
         }
     }
 }
