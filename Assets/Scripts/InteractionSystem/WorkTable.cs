@@ -26,6 +26,7 @@ public class WorkTable : AbstractInteractable
             gameObject.layer = 0;
             return true;
         }
+        correctIds = 0;
         textOpacity.fadeTime = 3f;
         uiInfoText.text = notEnoughTexts;
         return false;
