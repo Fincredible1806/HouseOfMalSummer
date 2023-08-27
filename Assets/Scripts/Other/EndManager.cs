@@ -44,6 +44,8 @@ public class EndManager : MonoBehaviour
     }
     public void Continue()
     {
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
         Time.timeScale = 1;
         player.transform.position = new Vector3(resetLocation.x, resetLocation.y, resetLocation.z);
         endCanvas.SetActive(false);
