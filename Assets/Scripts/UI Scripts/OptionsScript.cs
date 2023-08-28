@@ -7,28 +7,16 @@ using UnityEngine.UI;
 public class OptionsScript : MonoBehaviour
 {
     public AudioMixer audioMixer;
-    public Slider volumeSlider;
-    private static float gameVolume = 1f;
-    private void Start()
-    {
-        gameVolume = PlayerPrefs.GetFloat("volume");
-        audioMixer.SetFloat("volume", gameVolume);
-        volumeSlider.value = gameVolume;
-    }
-    private void Update()
-    {
-        audioMixer.SetFloat("volume", gameVolume);
-        PlayerPrefs.SetFloat("volume", gameVolume);
 
-
-
-    }
-    public void VolumeUpdater(float volume)
+    public void SetVolume (float volume)
     {
-        gameVolume = volume;
+        audioMixer.SetFloat("volume", Mathf.Log10(volume) * 20);
     }
 
-
+    public void SetFullscreen(bool isFull)
+    {
+        Screen.fullScreen = isFull;
+    }
 
 
 }
