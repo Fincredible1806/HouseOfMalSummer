@@ -6,8 +6,11 @@ using TMPro;
 public class NoteInteract : AbstractInteractable
 {
     [SerializeField] TMP_Text noteText;
+    public GameObject particlePrefab;
     public override bool Interaction(Interaction interaction, PlayerInformation playerInformation)
         {
+            Instantiate(particlePrefab, transform.position, transform.rotation);
+            Destroy(particlePrefab, 1.2f);
             playerInformation.noteInfos.Add(noteText.text);
             playerInformation.playerInventory.Add(id, this);
             AudioSource.PlayClipAtPoint(interactSFX, transform.position);
