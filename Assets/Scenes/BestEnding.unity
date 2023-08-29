@@ -558,9 +558,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Thanks to your paintsakingly thorough effort of finding all the notes,
-    the police could identify the murderer immediately and catch him before he could
-    begin his escape, sterling effort!
+  m_text: Due to finding the ever crucial memory card, the police were able to quickly
+    arrest and bring the killer to justice, you should be proud of yourself!
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: d3bd5da03e91ef745b8382561e625ed0, type: 2}
   m_sharedMaterial: {fileID: 1231748758514796460, guid: d3bd5da03e91ef745b8382561e625ed0, type: 2}
