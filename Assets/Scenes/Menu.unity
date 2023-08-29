@@ -871,6 +871,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   transition: {fileID: 5618078179279639996}
   transitionTime: 3
+  mainMenu: 0
 --- !u!1 &684057929
 GameObject:
   m_ObjectHideFlags: 0
@@ -3145,6 +3146,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: LevelLoader
       objectReference: {fileID: 0}
+    - target: {fileID: 5618078180554460827, guid: a9b1d2edfa48b814c814f3fd93a18958, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_AddedGameObjects: []
   m_SourcePrefab: {fileID: 100100000, guid: a9b1d2edfa48b814c814f3fd93a18958, type: 3}
@@ -3222,7 +3227,15 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 8930256477381109724, guid: f47f8ed905c9f1647bb3432ea19a1f9b, type: 3}
       propertyPath: m_Value
-      value: 0
+      value: 0.0002
+      objectReference: {fileID: 0}
+    - target: {fileID: 8930256477381109724, guid: f47f8ed905c9f1647bb3432ea19a1f9b, type: 3}
+      propertyPath: m_MaxValue
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 8930256477381109724, guid: f47f8ed905c9f1647bb3432ea19a1f9b, type: 3}
+      propertyPath: m_MinValue
+      value: 0.0002
       objectReference: {fileID: 0}
     - target: {fileID: 8930256477381109724, guid: f47f8ed905c9f1647bb3432ea19a1f9b, type: 3}
       propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.size
@@ -3238,7 +3251,7 @@ PrefabInstance:
       objectReference: {fileID: 1752998417}
     - target: {fileID: 8930256477381109724, guid: f47f8ed905c9f1647bb3432ea19a1f9b, type: 3}
       propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: VolumeUpdater
+      value: SetVolume
       objectReference: {fileID: 0}
     - target: {fileID: 8930256477381109724, guid: f47f8ed905c9f1647bb3432ea19a1f9b, type: 3}
       propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
@@ -3262,7 +3275,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8930256477381109725, guid: f47f8ed905c9f1647bb3432ea19a1f9b, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0
+      value: 128.96367
       objectReference: {fileID: 0}
     - target: {fileID: 8930256477397851928, guid: f47f8ed905c9f1647bb3432ea19a1f9b, type: 3}
       propertyPath: m_SizeDelta.x
@@ -3270,7 +3283,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8930256477397851928, guid: f47f8ed905c9f1647bb3432ea19a1f9b, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 200
+      value: 328.96368
       objectReference: {fileID: 0}
     - target: {fileID: 8930256477397851935, guid: f47f8ed905c9f1647bb3432ea19a1f9b, type: 3}
       propertyPath: m_fontSize
@@ -3438,7 +3451,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8930256478337464567, guid: f47f8ed905c9f1647bb3432ea19a1f9b, type: 3}
       propertyPath: m_AnchorMax.x
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8930256478337464567, guid: f47f8ed905c9f1647bb3432ea19a1f9b, type: 3}
       propertyPath: m_AnchorMax.y
@@ -3446,11 +3459,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8930256478337464567, guid: f47f8ed905c9f1647bb3432ea19a1f9b, type: 3}
       propertyPath: m_AnchorMin.x
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8930256478701196806, guid: f47f8ed905c9f1647bb3432ea19a1f9b, type: 3}
       propertyPath: m_AnchorMax.x
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8930256478701196806, guid: f47f8ed905c9f1647bb3432ea19a1f9b, type: 3}
       propertyPath: m_AnchorMax.y
