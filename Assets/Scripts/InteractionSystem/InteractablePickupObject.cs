@@ -8,8 +8,11 @@ public class InteractablePickupObject : AbstractInteractable
     public AudioClip pickUpVoiceLine;
     public bool isAVoiceTrigger;
     public VoiceActTrigger voiceActTrigger;
+    public GameObject particlePrefab;
     public override bool Interaction(Interaction interaction, PlayerInformation playerInformation)
     {
+        Instantiate(particlePrefab, transform.position, transform.rotation);
+        Destroy(particlePrefab, 1.2f);
         AudioSource.PlayClipAtPoint(interactSFX, transform.position);
         playerInformation.playerInventory.Add(id, this);
         textOpacity.fadeTime = 3f;
