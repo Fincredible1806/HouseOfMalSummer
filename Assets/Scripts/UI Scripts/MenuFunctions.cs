@@ -9,6 +9,12 @@ public class MenuFunctions : MonoBehaviour
     public float transitionTime = 1f;
     public bool mainMenu;
 
+
+    private void Start()
+    {
+        Time.timeScale = 1;
+    }
+
     public void LoadGame()
     {
         StartCoroutine(EnterGame(SceneManager.GetActiveScene().buildIndex + 1));
@@ -19,6 +25,7 @@ public class MenuFunctions : MonoBehaviour
         yield return new WaitForSeconds(transitionTime);
         if(mainMenu)
         SceneManager.LoadSceneAsync(levelIndex);
+        Debug.Log("Loading level");
     }
     public void QuitGame()
     {

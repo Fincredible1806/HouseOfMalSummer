@@ -23,6 +23,8 @@ public class NoteDisplayerManager : MonoBehaviour
     {
         displayedTextNo = playerInformation.noteInfos.Count - 1;
         displayInfoText();
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
     }
 
     void PreviousIndex()
@@ -48,6 +50,12 @@ public class NoteDisplayerManager : MonoBehaviour
     void displayInfoText()
     {
         theText.text = playerInformation.noteInfos[displayedTextNo];
+    }
+
+    private void OnDisable()
+    {
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
     }
 }
 
