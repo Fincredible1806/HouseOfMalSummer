@@ -13,55 +13,40 @@ MonoBehaviour:
   m_Name: Bloom
   m_EditorClassIdentifier: 
   active: 1
+  skipIterations:
+    m_OverrideState: 0
+    m_Value: 0
   threshold:
     m_OverrideState: 1
-    m_Value: 4.5
+    m_Value: 1
   intensity:
     m_OverrideState: 1
     m_Value: 1
   scatter:
     m_OverrideState: 1
-    m_Value: 0.264
+    m_Value: 0.294
   clamp:
     m_OverrideState: 1
     m_Value: 65469.77
   tint:
     m_OverrideState: 1
-    m_Value: {r: 0.9528302, g: 0.91905785, b: 0.84046817, a: 1}
+    m_Value: {r: 1, g: 1, b: 1, a: 1}
   highQualityFiltering:
     m_OverrideState: 0
     m_Value: 0
-  skipIterations:
+  downscale:
     m_OverrideState: 0
     m_Value: 0
+  maxIterations:
+    m_OverrideState: 0
+    m_Value: 6
   dirtTexture:
     m_OverrideState: 0
     m_Value: {fileID: 2800000, guid: f3705f0ba38affb49bc762d539eee941, type: 3}
+    dimension: 1
   dirtIntensity:
     m_OverrideState: 0
     m_Value: 747
---- !u!114 &-4228513371166385260
-MonoBehaviour:
-  m_ObjectHideFlags: 3
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 70afe9e12c7a7ed47911bb608a23a8ff, type: 3}
-  m_Name: SplitToning
-  m_EditorClassIdentifier: 
-  active: 1
-  shadows:
-    m_OverrideState: 1
-    m_Value: {r: 0.4433962, g: 0.4433962, b: 0.4433962, a: 1}
-  highlights:
-    m_OverrideState: 1
-    m_Value: {r: 1, g: 1, b: 1, a: 1}
-  balance:
-    m_OverrideState: 1
-    m_Value: 100
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -79,7 +64,6 @@ MonoBehaviour:
   - {fileID: 7125400891631118110}
   - {fileID: -8339808407944058771}
   - {fileID: 6535991774795920632}
-  - {fileID: -4228513371166385260}
 --- !u!114 &5774690970555502907
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -96,6 +80,30 @@ MonoBehaviour:
   mode:
     m_OverrideState: 1
     m_Value: 2
+  neutralHDRRangeReductionMode:
+    m_OverrideState: 0
+    m_Value: 2
+  acesPreset:
+    m_OverrideState: 0
+    m_Value: 3
+  hueShiftAmount:
+    m_OverrideState: 0
+    m_Value: 0
+  detectPaperWhite:
+    m_OverrideState: 0
+    m_Value: 0
+  paperWhite:
+    m_OverrideState: 0
+    m_Value: 300
+  detectBrightnessLimits:
+    m_OverrideState: 0
+    m_Value: 1
+  minNits:
+    m_OverrideState: 0
+    m_Value: 0.005
+  maxNits:
+    m_OverrideState: 0
+    m_Value: 1000
 --- !u!114 &6535991774795920632
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -133,10 +141,10 @@ MonoBehaviour:
   active: 1
   postExposure:
     m_OverrideState: 1
-    m_Value: 0.2
+    m_Value: 10
   contrast:
     m_OverrideState: 1
-    m_Value: 11.3
+    m_Value: -55
   colorFilter:
     m_OverrideState: 1
     m_Value: {r: 0.46226418, g: 0.46226418, b: 0.46226418, a: 1}

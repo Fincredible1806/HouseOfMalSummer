@@ -12,6 +12,8 @@ public class SoundTrigger : MonoBehaviour
     private float triggerSet;
     [SerializeField] string playerTag;
     [SerializeField] AudioSource AS;
+    [SerializeField] bool isDestroyer;
+    [SerializeField] GameObject triggerCollider;
         void OnTriggerEnter(Collider other)
         {
             if (other.CompareTag(playerTag))
@@ -21,6 +23,11 @@ public class SoundTrigger : MonoBehaviour
                 {
                 SoundPicker();
                 }
+
+            if(isDestroyer)
+            {
+                triggerCollider.SetActive(false);
+            }
             }
         }
 
