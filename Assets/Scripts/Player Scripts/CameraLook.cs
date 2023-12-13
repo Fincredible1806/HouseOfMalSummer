@@ -13,13 +13,15 @@ public class CameraLook : MonoBehaviour
     // Update is called once per frame
     void LateUpdate()
     {
-        //Updating camera location every frame based on player
-        CameraMovement();
-        foreach (var currentItem in heldItems)
+        if (Time.timeScale == 1f)
         {
-            currentItem.transform.localRotation = Quaternion.Euler(xRotation + 90f, 0f, 0f);
+            //Updating camera location every frame based on player
+            CameraMovement();
+            foreach (var currentItem in heldItems)
+            {
+                currentItem.transform.localRotation = Quaternion.Euler(xRotation + 90f, 0f, 0f);
+            }
         }
-
     }
 
     private void CameraMovement()

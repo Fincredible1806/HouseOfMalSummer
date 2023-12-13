@@ -51,13 +51,15 @@ public class PauseManager : MonoBehaviour
             if(!notesUp)
             {
                 bringUpNotes();
-                notesUp = true;
             }
-            if(notesUp)
+            else
             {
                 bringDownNotes();
-                notesUp = false;
-            }    
+            }
+            if (pauseMenuUI.active == false && playerInformation.noteInfos.Count > 0)
+            {
+                notesUp = !notesUp;
+            }
         }
     }
     public void Resume()
@@ -74,10 +76,10 @@ public class PauseManager : MonoBehaviour
 
     public void Pause()
     {
-        noteUI.active = false;
         notesUp = false;
         // Pausing the game
         inGameUI.SetActive(false);
+        noteUI.active = false;
         pauseMenuUI.SetActive(true);
         Cursor.lockState = CursorLockMode.None;
         Cursor.visible = true;
@@ -98,10 +100,7 @@ public class PauseManager : MonoBehaviour
         {
             inMainStuff.active = false;
             noteUI.active = true;
-            if (!GameIsPaused)
-            {
-                return;
-            }
+            Time.timeScale = 0f;
         }
     }
 
@@ -111,10 +110,7 @@ public class PauseManager : MonoBehaviour
         {
             inMainStuff.active = true;
             noteUI.active = false;
-            if (GameIsPaused)
-            {
-                return;
-            }
+            Time.timeScale = 1f;
         }
     }
 

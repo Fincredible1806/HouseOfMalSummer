@@ -29,16 +29,19 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        bool isGrounded = Physics.CheckSphere(groundCheck.position, groundDistance, groundMask);
-
-        if (isGrounded && velocity.y < 0)
+        if (Time.timeScale == 1.0f)
         {
-            velocity.y = -2f;
+            bool isGrounded = Physics.CheckSphere(groundCheck.position, groundDistance, groundMask);
 
+            if (isGrounded && velocity.y < 0)
+            {
+                velocity.y = -2f;
+
+            }
+
+            Movement();
+            LightToggle();
         }
-
-        Movement();
-        LightToggle();
     }
 
     private void Movement()
