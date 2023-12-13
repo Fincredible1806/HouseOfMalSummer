@@ -26,7 +26,7 @@ public class SoundTrigger : MonoBehaviour
 
             if(isDestroyer)
             {
-                triggerCollider.SetActive(false);
+                StartCoroutine(waiter());
             }
             }
         }
@@ -36,5 +36,13 @@ public class SoundTrigger : MonoBehaviour
         AudioClip clip = soundClips[Random.Range(0, soundClips.Length)];
         AS.clip = clip;
         AS.Play();
+    }
+
+    IEnumerator waiter()
+    {
+        Debug.Log("Destroying");
+        yield return new WaitForSeconds(5);
+        triggerCollider.SetActive(false);
+
     }
 }
