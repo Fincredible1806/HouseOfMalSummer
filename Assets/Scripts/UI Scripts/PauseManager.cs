@@ -12,6 +12,7 @@ public class PauseManager : MonoBehaviour
     [SerializeField] PlayerInformation playerInformation;
     public GameObject inMainStuff;
     public GameObject noteUI;
+    private bool notesUp = false;
 
 
     private void Awake()
@@ -47,7 +48,16 @@ public class PauseManager : MonoBehaviour
         }
         if (Input.GetKeyDown(KeyCode.LeftShift))
         {
-            bringUpNotes();
+            if(!notesUp)
+            {
+                bringUpNotes();
+                notesUp = true;
+            }
+            if(notesUp)
+            {
+                bringDownNotes();
+                notesUp = false;
+            }    
         }
     }
     public void Resume()
@@ -64,6 +74,8 @@ public class PauseManager : MonoBehaviour
 
     public void Pause()
     {
+        noteUI.active = false;
+        notesUp = false;
         // Pausing the game
         inGameUI.SetActive(false);
         pauseMenuUI.SetActive(true);
@@ -84,24 +96,28 @@ public class PauseManager : MonoBehaviour
     {
         if (playerInformation.noteInfos.Count > 0)
         {
-            inMainStuff.active = !inMainStuff.active;
-            noteUI.active = !noteUI.active;
+            inMainStuff.active = false;
+            noteUI.active = true;
             if (!GameIsPaused)
             {
-                Time.timeScale = 0f;
-                GameIsPaused = true;
                 return;
             }
-            if (GameIsPaused)
-            {
-                Time.timeScale = 1f;
-                GameIsPaused = false;
-                return;
-            }
-
         }
     }
-    
 
-
+    public void bringDownNotes()
+    {
+        if (playerInformation.noteInfos.Count > 0)
+        {
+            inMainStuff.active = true;
+            noteUI.active = false;
+            if (GameIsPaused)
+            {
+                return;
+            }
+        }
     }
+
+
+
+}
